@@ -1,0 +1,265 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Prevent text selection */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ffd700; /* Gold accent for premium feel */
+}
+
+.hadith {
+    font-size: 1.2em;
+    font-family: 'Noto Naskh Arabic', 'Al Qalam', 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', sans-serif; /* Use Noto Naskh Arabic font */
+    text-align: left; /* Ensure text is aligned to the right */
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.arabic {
+    font-size: 2em;
+    direction: rtl;
+    font-family: 'Noto Naskh Arabic', 'Al Qalam', 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Alvi Nastaleeq', sans-serif; /* Use Noto Naskh Arabic font */
+    text-align: right; /* Ensure text is aligned to the right */
+}
+
+.bangla-spelling, .bangla-translation {
+    font-size: 1.2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+tr {
+    cursor: pointer; /* Indicate row is clickable */
+}
+
+tr:hover {
+    background-color: #2a2a2a; /* Hover effect for rows */
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6c200;
+}
+
+#navigation {
+    text-align: center;
+}
+
+#jump-to-day {
+    width: 60px;
+    margin: 0 10px;
+    background-color: #222;
+    border: 2px solid #ffd700; /* Premium border */
+    padding: 8px;
+    border-radius: 5px;
+    color: #ffd700;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#jump-to-day:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ffd700; /* Premium glow on focus */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.checklist-row {
+    cursor: pointer; /* Indicate row is clickable */
+}
+
+.checklist-row:hover {
+    background-color: #2a2a2a; /* Hover effect for rows */
+}
+
+.checklist input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox style */
+    width: 20px;
+    height: 20px;
+    background-color: #333; /* Dark background */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 4px; /* Slightly rounded edges */
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.checklist input[type="checkbox"]:checked {
+    background-color: #ffd700; /* Gold fill when checked */
+    border-color: #e6c200; /* Slightly darker gold */
+}
+
+.checklist input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Checkmark symbol */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #111; /* Dark checkmark for contrast */
+    font-weight: bold;
+}
+
+.checklist input[type="checkbox"]:hover {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5); /* Subtle glow on hover */
+}
+
+/* Replace the previous footer CSS with this */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: #ffd700;
+    font-size: 24px; /* Size of the icons */
+    margin: 0 15px; /* Spacing between icons */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #e6c200;
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.daily-checklist {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.daily-checklist h2 {
+    color: #333;
+}
+
+.daily-checklist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.daily-checklist li {
+    margin: 10px 0;
+}
+
+/* Add this CSS for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: #fff;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#copy-button {
+    background-color: #ffd700;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#copy-button:hover {
+    background-color: #e6c200;
+}
+
+/* Add this CSS for the notification */
+.notification {
+    margin-top: 10px;
+    color: #ffd700; /* Gold color for the notification */
+    font-weight: bold;
+}
